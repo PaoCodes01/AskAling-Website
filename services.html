@@ -39,5 +39,69 @@
             </div>
         </div>
     </section>
+
+    <section class="services-highlight">
+  <div class="highlight-inner">
+    <h2 class="highlight-title">
+      Adaptable. Scalable. Made for Your Community.
+    </h2>
+    <div class="highlight-features">
+      <div class="highlight-card">
+        <h3><span>24/7</span> Availability</h3>
+        <p>Accessible anytime through Messenger.</p>
+      </div>
+      <div class="highlight-card">
+        <h3><span>100%</span> Focus</h3>
+        <p>On community needs and local priorities.</p>
+      </div>
+      <div class="highlight-card">
+        <h3><span>1</span> Goal</h3>
+        <p>Make barangay services more accessible.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services-details">
+  <h2 class="details-title">Here's what Ask Aling can do:</h2>
+  <div class="details-grid">
+    <div class="details-card red hidden">
+      <span class="card-number">01</span>
+      <h3>Health & Wellness</h3>
+      <p>Gives details about vaccination schedules, clinic operating hours, and primary healthcare reminders when asked.</p>
+    </div>
+    <div class="details-card yellow hidden">
+      <span class="card-number">02</span>
+      <h3>Disaster Preparedness</h3>
+      <p>Provides safety guidelines, evacuation information, and emergency updates upon request.</p>
+    </div>
+    <div class="details-card yellow hidden">
+      <span class="card-number">03</span>
+      <h3>Community Programs</h3>
+      <p>Shares information about clean-up drives, livelihood opportunities, and other local initiatives.</p>
+    </div>
+    <div class="details-card red hidden">
+      <span class="card-number">04</span>
+      <h3>Resident Support</h3>
+      <p>Directs residents to the right process for requesting documents, accessing services, or contacting barangay offices.</p>
+    </div>
+  </div>
+</section>
+
+<script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+        observer.unobserve(entry.target); // only animate once
+      }
+    });
+  }, { threshold: 0.2 });
+
+  document.querySelectorAll('.details-card').forEach(card => {
+    observer.observe(card);
+  });
+</script>
+
 </body>
 </html>
