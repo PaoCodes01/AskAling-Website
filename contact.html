@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <img src="images/logo.png" alt="ASK A.L.I.N.G Logo" height="50" />
+        </div>
+        <ul class="navbar-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About AskAling</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    <a href="#" class="navbar-chatbot">Test Our Chatbot</a>
+    </nav>
+    <h1>Contact</h1>
+    <section class="contact-section">
+        <div class="contact-container">
+            <h2 class="contact-title">Partner with us today</h2>
+            <p class="contact-lead">Bring smarter, faster, and more personal services to your barangay.</p>
+
+            <div class="contact-card" id="contactCard">
+            <form id="contact-form" class="contact-form" method="post" action="#" data-integration="excel-ready">
+                <div class="form-row">
+                    <div class="form-field">
+                        <label for="firstName">First name *</label>
+                        <input id="firstName" name="firstName" type="text" required data-export-field="first_name" placeholder="First name" />
+                        <small class="field-error" aria-hidden="true"></small>
+                    </div>
+                    <div class="form-field">
+                        <label for="lastName">Last name *</label>
+                        <input id="lastName" name="lastName" type="text" required data-export-field="last_name" placeholder="Last name" />
+                        <small class="field-error" aria-hidden="true"></small>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-field">
+                        <label for="email">Email *</label>
+                        <input id="email" name="email" type="email" required data-export-field="email" placeholder="you@example.com" />
+                        <small class="field-error" aria-hidden="true"></small>
+                    </div>
+                    <div class="form-field">
+                        <label for="phone">Phone *</label>
+                        <input id="phone" name="phone" type="tel" required data-export-field="phone" placeholder="09xx-xxx-xxxx" />
+                        <small class="field-error" aria-hidden="true"></small>
+                    </div>
+                </div>
+
+                <div class="form-row single">
+                    <div class="form-field">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" required data-export-field="message" placeholder="Write your message here"></textarea>
+                        <small class="field-error" aria-hidden="true"></small>
+                    </div>
+                </div>
+
+                <div class="form-row single">
+                    <button type="submit" class="btn submit-btn" data-action="submit-contact">Submit</button>
+                </div>
+            </form>
+                        </div>
+        </div>
+    </section>
+
+        <script>
+            // Entrance animation for contact card and staggered fields
+            document.addEventListener('DOMContentLoaded', () => {
+                const card = document.getElementById('contactCard');
+                if (!card) return;
+                // add animate to card (lift)
+                requestAnimationFrame(() => card.classList.add('animate'));
+
+                // stagger form fields
+                const fields = card.querySelectorAll('.form-field');
+                fields.forEach((f, i) => {
+                    setTimeout(() => f.classList.add('visible'), 120 * i);
+                });
+            });
+        </script>
+
+
+</body>
+</html>

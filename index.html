@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AskAling</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <img src="images/logo.png" alt="ASK A.L.I.N.G Logo" height="50" />
+        </div>
+        <ul class="navbar-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About AskAling</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <a href="#" class="navbar-chatbot">Test Our Chatbot</a>
+    </nav>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-content">
+        <img src="images/hero.png" alt="ASK A.L.I.N.G Logo" class="hero-logo" />
+        <div class="hero-text-container">
+            <p class="hero-subtitle">— Your Barangay Companion, One Chat Away.</p>
+            <p class="hero-text">Empowering barangays with faster, reliable, and more personal community service.</p>
+        </div>
+    </div>
+</section>
+
+    <!-- About Info Section -->
+    <section class="about-info-section">
+        <div class="about-info-card about-info-left">
+            <h2>What is AskAling?</h2>
+            <p><strong>AskAling</strong> AskAling is your friendly barangay chatbot that helps residents easily find answers about local services and community concerns. 
+                Inspired by the Filipino term “Aling”—often used to address a familiar and approachable neighbor—the chatbot feels like talking to someone you know and trust. 
+                Whether it’s about barangay clearances, schedules, or programs, AskAling is here to provide quick and reliable information, just like asking a helpful neighbor.</p>
+            <a href="about.html" class="about-btn about-btn-yellow">LEARN MORE</a>
+        </div>
+        <div class="about-info-card about-info-right">
+            <h2>Key Features</h2>
+            <ul class="about-features-list">
+                <li>✓ Available in Tagalog/Taglish</li>
+                <li>✓ Barangay-specific customization</li>
+                <li>✓ Integration with Messenger/Facebook pages</li>
+                <li>✓ Human fallback support</li>
+            </ul>
+            <a href="services.html" class="about-btn about-btn-red">SEE HOW IT WORKS</a>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section">
+        <h2 class="benefits-heading">Benefits of AskAling Chatbot</h2>
+        <div class="benefits-cards">
+            <!-- For Barangay Staff -->
+            <div class="benefits-card">
+                <div class="benefits-box staff">
+                    <div class="benefits-label">For Barangay Staff</div>
+                    <div class="benefit-item">
+                        <span class="benefit-title">1&nbsp; Better Communication</span>
+                        <div class="benefit-desc">Quickly address resident concerns through an accessible, digital channel</div>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-title">2&nbsp; Less Workload</span>
+                        <div class="benefit-desc">Automates frequently asked questions so staff can focus on more important tasks</div>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-title">3&nbsp; Modern Governance</span>
+                        <div class="benefit-desc">Strengthens trust and credibility by offering a tech-driven yet culturally familiar service</div>
+                    </div>
+                </div>
+            </div>
+            <!-- For Residents -->
+            <div class="benefits-card">
+                <div class="benefits-box residents">
+                    <div class="benefits-label residents-label">For Residents</div>
+                    <div class="benefit-item">
+                        <span class="benefit-title">1&nbsp; Easy Access to Information</span>
+                        <div class="benefit-desc">Get instant answers about barangay services anytime</div>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-title">2&nbsp; Saves Time and Effort</span>
+                        <div class="benefit-desc">Handles routine inquiries digitally, reducing transaction costs from in-person barangay visits</div>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-title">3&nbsp; Personalized Support</span>
+                        <div class="benefit-desc">Out-of-scope inquiries are redirected to barangay staff, ensuring accountability and human support</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+
+    <!-- Trust & Convenience Section -->
+    <section class="trust-section">
+        <div class="trust-container">
+            <div class="trust-left">
+                <h2 class="trust-heading">Designed for<br>Trust &amp;<br>Convenience</h2>
+            </div>
+            <div class="trust-right">
+                <div class="trust-card">
+                    <h3>Data Security</h3>
+                    <p>Your privacy is safe with AskAling. No third-party sharing of information.</p>
+                </div>
+                <div class="trust-card">
+                    <h3>Ease of Use</h3>
+                    <p>Works right inside Messenger, no need to download apps or learn new systems.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+
+<script>
+// Fade in text when page loads
+document.addEventListener("DOMContentLoaded", () => {
+    const textElements = document.querySelectorAll(".hero-subtitle, .hero-text");
+    textElements.forEach((el, index) => {
+        el.style.opacity = "0";
+        el.style.transform = "translateY(20px)";
+        setTimeout(() => {
+            el.style.transition = "all 0.8s ease";
+            el.style.opacity = "1";
+            el.style.transform = "translateY(0)";
+        }, index * 500); // stagger effect
+    });
+});
+</script>
